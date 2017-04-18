@@ -11,7 +11,7 @@ class Fixnum
         90 => 'ninety', 80 => 'eighty', 70 => 'seventy', 60 => 'sixty', 50 => 'fifty', 40 => 'forty', 30 => 'thirty', 20 => 'twenty'
       },
       teens = {
-        19 => 'nineteen', 18 => 'eighteen', 17 => 'seventeen', 16 => 'sixeen', 15 => 'fifteen', 14 => 'fourteen', 13 => 'thirteen', 12 => 'twelve', 11 => 'eleven'
+        19 => 'nineteen', 18 => 'eighteen', 17 => 'seventeen', 16 => 'sixteen', 15 => 'fifteen', 14 => 'fourteen', 13 => 'thirteen', 12 => 'twelve', 11 => 'eleven', 10=> 'ten'
       },
       single_digits = {
         9 => 'nine', 8 => 'eight', 7 => 'seven', 6 => 'six', 5 => 'five', 4 => 'four', 3 => 'three', 2 => 'two', 1=> 'one'
@@ -41,9 +41,11 @@ class Fixnum
           end
         end
       end
-      answer.concat(position.fetch(i-1))
+      if answer != ""
+        answer.concat(position.fetch(i-1))
+      end
       answer_arr.push(answer)
-      i = i-1
+      i -= 1
     end
     answer_arr.join(" ")
   end

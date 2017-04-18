@@ -9,6 +9,6 @@ describe('Fixnum#numbers_to_words') do
   #   expect(13.numbers_to_words()).to(eq('thirteen'))
   # end
   it('successfully returns a three digit number') do
-    expect(2664221.numbers_to_words()).to(eq('three hundred eighty four'))
+    expect(123456789.numbers_to_words()).to(eq('one hundred twenty three million four hundred fifty six thousand seven hundred eighty nine'))
   end
 end
